@@ -545,7 +545,6 @@ const modalStock = document.getElementById("modal-stock");
 const modalDescription = document.getElementById("modal-description");
 const modalCartButton = document.getElementById("modal-cart-button");
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
-// let favorites = JSON.parse(localStorage.getItem("favorites")) || [];
 let selectedCategory = "all";
 let toastTimeout;
 let activeModalProduct = null;
@@ -578,23 +577,6 @@ function saveCart() {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-// function saveFavorite(){
-//     localStorage.setItem("favorites",JSON.stringify(favorites));
-// }
-// function isFavorite(productName) {
-//     return favorites.includes(productName);
-// }
-// function toggleFavorite(productName){
-//     if (isFavorite(productName)){
-//         favorites = favorites.filter(function(item){
-//             return item !== productName;
-//         });
-//     } else {
-//         favorites.push(productName);
-//     }
-//     saveFavorites();
-//     updateProductsView();
-// }
 function getPriceValue(price) {
     return Number(price);
 }
@@ -704,18 +686,6 @@ function renderProducts(items) {
     productCard.className = "product-card";
     productCard.setAttribute("tabindex","0");
 
-    // const favoriteButton = document.createElement("button");
-    // favoriteButton.className = "favorite-button";
-    // favoriteButton.setAttribute("type","button");
-    // favoriteButton.innerHTML = "&#10084;";
-
-    // if(isFavorite(product.name)) {
-    //     favoriteButton.classList.add("active");
-    // }
-    // favoriteButton.addEventListener("click",function(){
-    //     toggleFavorite(product.name);
-    // });
-
     productCard.addEventListener("click",function(){
         openModal(product);
     });
@@ -744,22 +714,7 @@ function renderProducts(items) {
     cartButton.addEventListener("click", function (event) {
         event.stopPropagation();
       const selectedProduct = products[productIndex];
-    //   const existingProduct = cart.find(function(item){
-    //     return item.name === selectedProduct.name;
-    //   });
-    // if (existingProduct) {
-    //     existingProduct.quantity +=1;
-    // } else {
-    //     cart.push({
-    //         name: selectedProduct.name,
-    //         price: selectedProduct.price,
-    //         image: selectedProduct.image,
-    //         quantity: 1
-    //     });
-    // }
-    //   saveCart();
-    //   updateCartCount();
-    //   showToast();
+        
     addProductToCart(selectedProduct);
     });
 
