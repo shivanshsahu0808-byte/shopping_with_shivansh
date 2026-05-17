@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page </title>
+    <title>Shivansh store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-Box">
+            <h1 class="logo">Shivansh Sahu</h1>
+            <div class="header-light">
+                <nav class="nav">
+                <a class="nav-link" href="products.html">Home</a>
+                <a class="nav-link" href="products.html">Products</a>
+                <a class="nav-link" href="cart.html">Cart <span class="cart-count" id="cart-count">0</span></a>
+            </nav>
+            <button class="theme-toggle" id="theme-toggle" type="button">Dark Mode</button>
+            <form class="search-box">
+                <input class="search-input" type="text" placeholder="search products">
+            </form>
+
+            </div>
+        </div>
+    </header>
+    <div class="page">
+            <h2 class="title">Our Products</h2>
+            <div class="sort-box">
+                <label class="sort-label" for="sort-select">Sort By:</label>
+                <select class="sort-select" id="sort-select">
+                    <option value="default">Default</option>
+                    <option value="price-low-high">Price Low to High</option>
+                    <option value="price-high-low">Price High to Low</option>
+                    <option value="name-a-z">Name A-Z</option>
+                    <option value="name-z-a">Name Z-A</option>
+                </select>
+            </div>
+            <div class="filter-box">
+                <button class="filter-button active" type="button" data-category="all">All</button>
+                <button class="filter-button" type="button" data-category="electronics">Electronics</button>
+                <button class="filter-button" type="button" data-category="fashion">Fashion</button>
+                <button class="filter-button" type="button" data-category="accessories">Accessories</button>
+                <button class="filter-button" type="button" data-category="wearables">Wearables</button>
+                <button class="filter-button" type="button" data-category="home appliances">Home Appliances</button>
+                <button class="filter-button" type="button" data-category="kitchen">Kitchen</button>
+                <button class="filter-button" type="button" data-category="gaming">Gaming</button>
+                <button class="filter-button" type="button" data-category="women's clothing">Women's Clothing</button>
+                <button class="filter-button" type="button" data-category="men's clothing">Men's Clothing</button>
+                <button class="filter-button" type="button" data-category="sports">Sports</button>
+                <button class="filter-button" type="button" data-category="fitness">Fitness</button>
+                <button class="filter-button" type="button" data-category="furniture">Furniture</button>
+                <button class="filter-button" type="button" data-category="home decor">Home Decor</button>
+                <button class="filter-button" type="button" data-category="beauty">Beauty</button>
+                <button class="filter-button" type="button" data-category="music">Music</button>
+                <button class="filter-button" type="button" data-category="toy">Kids Toys</button>
+
+            </div>
+
+         <div class="product-list" id="product-list"></div>
+
+    </div>
+    
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="product-modal">
+            <button class="modal-close" id="modal-close" type="button">&times;</button>
+            <img class="modal-image" id="modal-image" src="" alt="">
+            <div class="modal-content">
+                <h3 class="modal-title" id="modal-title"></h3>
+                <p class="modal-price" id="modal-price"></p>
+                <div class="modal-rating" id="modal-rating"></div>
+                <p class="modal-stock" id="modal-stock"></p>
+                <p class="modal-description" id="modal-description"></p>
+                <button class="cart-button modal-cart-button" id="modal-cart-button" type="button">Add to Cart</button>
+            </div>
+        </div>
+
+    </div>
+    
+    <footer class="footer">
+        
+        <p class="footer-text">&copy; 2026 Shivansh Store</p>
+    </footer>
+    <script src="theme.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

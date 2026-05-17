@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Shivansh store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-box">
+            <h1 class="logo">Shivansh Store</h1>
+    <div class="header-right">
+        <nav class="nav">
+            <a class="nav-link" href="products.html">Home</a>
+            <a class="nav-link" href="products.html">Products</a>
+            <a class="nav-link" href="cart.html">Cart<span class="cart-count" id="cart-count">0</span></a>
+
+        </nav>
+        <button class="theme-toggle" id="theme-toggle" type="button">Dark Mode</button>
+        <form class="search-box">
+            <input class="search-input" type="text" placeholder="Search products">
+        </form>
+    </div>
+        </div>
+
+    </header>
+    <div class="page">
+        <section class="products">
+            <h2 class="title">Your Cart</h2>
+            <div class="cart-list" id="cart-list"></div>
+            <div class="cart-summary">
+                <p class="total-text">Total: <span id="total-price">₹0.00</span></p>
+                <button class="checkout-button" id="checkout-button" type="button">Proceed to checkout</button>
+            </div>
+        </section>
+    </div>
+    <div class="modal-overlay" id="success-overlay">
+        <div class="success-modal">
+            <h2 class="success-title">Order placed successfully</h2>
+            <p class="success-message">Thank you for shopping with Sahu Ji Store</p>
+            <div class="success-details">
+                <p class="success-itemss">Order ID: <span id="success-order-id"></span></p>
+                <p class="success-item">Estimated Delivery: <span id="success-delivery-date"></span></p>
+                <p class="success-item">Payment Method: <span id="success-payment-method"></span></p>
+                <p class="success-item">Total Amount: <span id="success-total-amount"></span></p>
+            </div>
+            <button class="cart-button continue-button" id="continue-button" type="button">Continue Shopping</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <p class="footer-text">&copy; 2026 Shivansh Store</p>
+    </footer>
+    <script src="theme.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>
